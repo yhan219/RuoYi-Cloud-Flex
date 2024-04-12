@@ -1,16 +1,10 @@
 spring:
   datasource:
-    dynamic:
-      # 设置默认的数据源或者数据源组,默认值即为 master
-      primary: master
-      datasource:
-        # 主库数据源
-        master:
-          type: ${spring.datasource.type}
-          driver-class-name: com.mysql.cj.jdbc.Driver
-          url: ${datasource.system-master.url}
-          username: ${datasource.system-master.username}
-          password: ${datasource.system-master.password}
+    type: ${spring.datasource.type}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${mybatis-flex.datasource.system-master.url}
+    username: ${mybatis-flex.datasource.system-master.username}
+    password: ${mybatis-flex.datasource.system-master.password}
 #        oracle:
 #          type: ${spring.datasource.type}
 #          driverClassName: oracle.jdbc.OracleDriver

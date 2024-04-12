@@ -6,10 +6,10 @@
 # 简介
 
 [![码云Gitee](https://gitee.com/yhan219/ruoyi-cloud-flex/badge/star.svg?theme=blue)](https://gitee.com/yhan219/ruoyi-cloud-flex)
-[![GitHub](https://img.shields.io/github/stars/yhan219/ruoyi-cloud-flex.svg?style=social&label=Stars)](https://github.com/yhan219/ruoyi-cloude-flex)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://gitee.com/yhan219/ruoyi-cloude-flex/blob/mybatis-flex/LICENSE)
+[![GitHub](https://img.shields.io/github/stars/yhan219/ruoyi-cloud-flex.svg?style=social&label=Stars)](https://github.com/yhan219/ruoyi-cloud-flex)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://gitee.com/yhan219/ruoyi-cloud-flex/blob/flex/LICENSE)
 <br>
-[![ruoyi-cloud-flex](https://img.shields.io/badge/ruoyi_cloud_flex-2.1.2-success.svg)](https://gitee.com/yhan219/ruoyi-cloude-flex)
+[![ruoyi-cloud-flex](https://img.shields.io/badge/ruoyi_cloud_flex-2.1.2-success.svg)](https://gitee.com/yhan219/ruoyi-cloud-flex)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1-blue.svg)]()
 [![JDK-17](https://img.shields.io/badge/JDK-17-green.svg)]()
 [![JDK-21](https://img.shields.io/badge/JDK-21-green.svg)]()
