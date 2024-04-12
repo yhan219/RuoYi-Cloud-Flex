@@ -9,13 +9,13 @@
 [![GitHub](https://img.shields.io/github/stars/yhan219/ruoyi-cloud-flex.svg?style=social&label=Stars)](https://github.com/yhan219/ruoyi-cloude-flex)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://gitee.com/yhan219/ruoyi-cloude-flex/blob/mybatis-flex/LICENSE)
 <br>
-[![ruoyi-cloude-flex](https://img.shields.io/badge/ruoyi_cloud_flex-2.1.2-success.svg)](https://gitee.com/yhan219/ruoyi-cloude-flex)
+[![ruoyi-cloud-flex](https://img.shields.io/badge/ruoyi_cloud_flex-2.1.2-success.svg)](https://gitee.com/yhan219/ruoyi-cloude-flex)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.1-blue.svg)]()
 [![JDK-17](https://img.shields.io/badge/JDK-17-green.svg)]()
 [![JDK-21](https://img.shields.io/badge/JDK-21-green.svg)]()
 
 
-ruoyi-cloud-flex是基于[ruoyi-cloud-plus](https://gitee.com/dromara/RuoYi-Cloud-Plus)分支的一个快速开发框架。
+ruoyi-cloud-flex是基于[ruoyi-cloud-plus](https://gitee.com/dromara/RuoYi-Cloud-Plus)的一个快速开发框架。
 
 RuoYi-Cloud-Plus 微服务通用权限管理系统 重写 RuoYi-Cloud 全方位升级(不兼容原框架)
 
