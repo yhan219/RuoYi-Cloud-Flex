@@ -17,18 +17,18 @@
 
 ruoyi-cloud-flex是基于[ruoyi-cloud-plus](https://gitee.com/dromara/RuoYi-Cloud-Plus)分支的一个快速开发框架。
 
-RuoYi-Vue-Plus 是重写 RuoYi-Vue 针对 `分布式集群与多租户` 场景全方位升级(不兼容原框架)
+RuoYi-Cloud-Plus 微服务通用权限管理系统 重写 RuoYi-Cloud 全方位升级(不兼容原框架)
 
-ruoyi-cloud-flex将ruoyi-vue-plus中使用的mybatis-plus替换为mybatis-flex,并根据两个ORM框架使用的不同修改了部分逻辑。底层完全重写。
+ruoyi-cloud-flex将ruoyi-cloud-plus中使用的mybatis-plus替换为mybatis-flex,并根据两个ORM框架使用的不同修改了部分逻辑。底层完全重写。
 
-**ruoyi-cloud-flex与ruoyi-vue-plus功能完全相同。**
+**ruoyi-cloud-flex与ruoyi-cloud-plus功能完全相同。**
 
 ruoyi-cloud-flex将定期同步ruoyi-cloud-plus，非冲突功能每天升级，冲突功能最迟不超过一周完成升级。
 
 # 版本
-与ruoyi-vue-plus保持一致，当前版本`5.1.2`
+与ruoyi-cloud-plus保持一致，当前版本`2.1.2`
 
-# 与ruoyi-vue-plus的差异
+# 与ruoyi-cloud-plus的差异
 
 ## 数据权限用法差异
 数据权限注解，修改为类，原写法：
