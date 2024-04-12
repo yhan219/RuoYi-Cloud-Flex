@@ -1,17 +1,10 @@
 spring:
   datasource:
-    dynamic:
-      # 设置默认的数据源或者数据源组,默认值即为 master
-      primary: master
-      seata: false
-      datasource:
-        # 主库数据源
-        master:
-          type: ${spring.datasource.type}
-          driver-class-name: com.mysql.cj.jdbc.Driver
-          url: ${datasource.job.url}
-          username: ${datasource.job.username}
-          password: ${datasource.job.password}
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${mybatis-flex.datasource.job.url}
+    username: ${mybatis-flex.datasource.job.username}
+    password: ${mybatis-flex.datasource.job.password}
 
 # powerjob 配置
 powerjob:
