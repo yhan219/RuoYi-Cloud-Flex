@@ -15,22 +15,22 @@
 [![JDK-21](https://img.shields.io/badge/JDK-21-green.svg)]()
 
 
-ruoyi-cloud-flex是基于[ruoyi-cloud-plus](https://gitee.com/dromara/RuoYi-Cloud-Plus)的一个快速开发框架。
+RuoYi-Cloud-Flex是基于[RuoYi-Cloud-Plus](https://gitee.com/dromara/RuoYi-Cloud-Plus)的一个快速开发框架。
 
 RuoYi-Cloud-Plus 微服务通用权限管理系统 重写 RuoYi-Cloud 全方位升级(不兼容原框架)
 
-ruoyi-cloud-flex将ruoyi-cloud-plus中使用的mybatis-plus替换为mybatis-flex,并根据两个ORM框架使用的不同修改了部分逻辑。底层完全重写。
+RuoYi-Cloud-Flex将RuoYi-Cloud-Plus中使用的MyBatis-Plus替换为MyBatis-Flex,并根据两个ORM框架使用的不同修改了部分逻辑。底层完全重写。
 
-**ruoyi-cloud-flex与ruoyi-cloud-plus功能完全相同。**
+**RuoYi-Cloud-Flex与RuoYi-Cloud-Plus功能完全相同。**
 
-ruoyi-cloud-flex将定期同步ruoyi-cloud-plus，非冲突功能每天升级，冲突功能最迟不超过一周完成升级。
+RuoYi-Cloud-Flex将定期同步RuoYi-Cloud-Plus，非冲突功能每天升级，冲突功能最迟不超过一周完成升级。
 
-另有vue版[ruoyi-vue-flex](https://gitee.com/yhan219/ruoyi-vue-flex)欢迎使用
+另有vue版[RuoYi-Vue-Flex](https://gitee.com/yhan219/ruoyi-vue-flex)欢迎使用
 
 # 版本
-与ruoyi-cloud-plus保持一致，当前版本`2.1.2`
+与RuoYi-Cloud-Flex保持一致，当前版本`2.1.2`
 
-# 与ruoyi-cloud-plus的差异
+# 与RuoYi-Cloud-Flex的差异
 
 ## 数据权限用法差异
 数据权限注解，修改为类，原写法：
@@ -47,11 +47,11 @@ ruoyi-cloud-flex将定期同步ruoyi-cloud-plus，非冲突功能每天升级，
         return paginateAs(pageQuery, queryWrapper, DataColumn.of("deptName", "d.dept_id"), DataColumn.of("userName", "r.create_by"));
     }
 ```
-> 注：尝试写过拦截器以达到用法完全相同的目的，可惜拦截器功能和mybatis flex的插件不兼容，使用了数据权限插件，则无法使用mybatis flex的多租户插件等。如果你有更好的方法，欢迎pr
+> 注：尝试写过拦截器以达到用法完全相同的目的，可惜拦截器功能和MyBatis-Flex的插件不兼容，使用了数据权限插件，则无法使用MyBatis-Flex的多租户插件等。如果你有更好的方法，欢迎pr
 
 ## 忽略租户写法差异
 - 配置中的差异：
-  原写法： 在yml中配置忽略的表，mybatis-flex不支持,但mybatis-flex会默认忽略没有多租户字段的表
+  原写法： 在yml中配置忽略的表，MyBatis-Flex不支持,但MyBatis-Flex会默认忽略没有多租户字段的表
 - 代码中的差异：
   原写法:在mapper中配置注解：
 ```java
@@ -65,9 +65,9 @@ TenantHelper.ignore(() -> baseMapper.selectTenantUserByUserName(userName, tenant
 ```
 
 ## 特别鸣谢
-[ruoyi-cloud-plus](https://gitee.com/dromara/RuoYi-Cloud-Plus)
+[RuoYi-Cloud-Flex](https://gitee.com/dromara/RuoYi-Cloud-Plus)
 
-[mybatis-flex](https://gitee.com/mybatis-flex/mybatis-flex)
+[MyBatis-Flex](https://gitee.com/mybatis-flex/mybatis-flex)
 
 [ruoyi-plus-vben](https://gitee.com/dapppp/ruoyi-plus-vben)
 
