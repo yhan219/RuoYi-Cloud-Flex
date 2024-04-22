@@ -28,9 +28,9 @@ RuoYi-Cloud-Flex将定期同步RuoYi-Cloud-Plus，非冲突功能每天升级，
 另有vue版[RuoYi-Vue-Flex](https://gitee.com/yhan219/ruoyi-vue-flex)欢迎使用
 
 # 版本
-与RuoYi-Cloud-Flex保持一致，当前版本`2.1.2`
+与RuoYi-Cloud-Plus保持一致，当前版本`2.1.2`
 
-# 与RuoYi-Cloud-Flex的差异
+# 与RuoYi-Cloud-Plus的差异
 
 ## 数据权限用法差异
 数据权限注解，修改为类，原写法：
