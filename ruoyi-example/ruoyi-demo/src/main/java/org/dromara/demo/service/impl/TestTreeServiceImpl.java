@@ -1,6 +1,8 @@
 package org.dromara.demo.service.impl;
 
 import cn.hutool.core.bean.BeanUtil;
+import com.mybatisflex.annotation.UseDataSource;
+import com.mybatisflex.core.query.QueryWrapper;
 import org.dromara.common.core.utils.StringUtils;
 import org.dromara.demo.domain.TestTree;
 import org.dromara.demo.domain.bo.TestTreeBo;
@@ -14,13 +16,15 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
+import static org.dromara.demo.domain.table.TestTreeTableDef.TEST_TREE;
+
 /**
  * 测试树表Service业务层处理
  *
  * @author Lion Li
  * @date 2021-07-26
  */
-// @DS("slave") // 切换从库查询
+@UseDataSource("slave") // 切换从库查询
 @RequiredArgsConstructor
 @Service
 public class TestTreeServiceImpl implements ITestTreeService {
@@ -29,28 +33,24 @@ public class TestTreeServiceImpl implements ITestTreeService {
 
     @Override
     public TestTreeVo queryById(Long id) {
-        // return baseMapper.selectVoById(id);
-        return null;
+        return baseMapper.selectOneWithRelationsByIdAs(id, TestTreeVo.class);
     }
 
     // @DS("slave") // 切换从库查询
     @Override
     public List<TestTreeVo> queryList(TestTreeBo bo) {
-        // LambdaQueryWrapper<TestTree> lqw = buildQueryWrapper(bo);
-        // return baseMapper.selectVoList(lqw);
-        return null;
-
+        QueryWrapper lqw = buildQueryWrapper(bo);
+        return baseMapper.selectListByQueryAs(lqw, TestTreeVo.class);
     }
 
-    // private LambdaQueryWrapper<TestTree> buildQueryWrapper(TestTreeBo bo) {
-    //     Map<String, Object> params = bo.getParams();
-    //     LambdaQueryWrapper<TestTree> lqw = Wrappers.lambdaQuery();
-    //     lqw.like(StringUtils.isNotBlank(bo.getTreeName()), TestTree::getTreeName, bo.getTreeName());
-    //     lqw.between(params.get("beginCreateTime") != null && params.get("endCreateTime") != null,
-    //         TestTree::getCreateTime, params.get("beginCreateTime"), params.get("endCreateTime"));
-    //     lqw.orderByAsc(TestTree::getId);
-    //     return lqw;
-    // }
+    private QueryWrapper buildQueryWrapper(TestTreeBo bo) {
+        Map<String, Object> params = bo.getParams();
+        return QueryWrapper.create()
+            .from(TEST_TREE)
+            .where(TEST_TREE.TREE_NAME.like(bo.getTreeName()))
+            .and(TEST_TREE.CREATE_TIME.between(params.get("beginCreateTime"), params.get("endCreateTime"), params.get("beginCreateTime") != null && params.get("endCreateTime") != null))
+            .orderBy(TEST_TREE.ID, true);
+    }
 
     @Override
     public Boolean insertByBo(TestTreeBo bo) {
@@ -76,13 +76,13 @@ public class TestTreeServiceImpl implements ITestTreeService {
      * @param entity 实体类数据
      */
     private void validEntityBeforeSave(TestTree entity) {
-        //TODO 做一些数据校验,如唯一约束
+        // TODO 做一些数据校验,如唯一约束
     }
 
     @Override
     public Boolean deleteWithValidByIds(Collection<Long> ids, Boolean isValid) {
         if (isValid) {
-            //TODO 做一些业务上的校验,判断是否需要校验
+            // TODO 做一些业务上的校验,判断是否需要校验
         }
         return baseMapper.deleteBatchByIds(ids) > 0;
     }
